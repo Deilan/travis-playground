@@ -2,10 +2,6 @@ os: windows
 
 language: bash
 
-before_install:
-  - git update-git-for-windows
-  - git --version
-
 install: skip  
 
 script: skip
