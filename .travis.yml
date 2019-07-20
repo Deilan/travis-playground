@@ -1,5 +1,10 @@
 language: bash
 
+addons:
+  apt:
+    packages:
+    - git
+
 install: skip
 
 script: skip
