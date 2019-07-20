@@ -3,7 +3,8 @@ os: windows
 language: bash
 
 before_install:
-  - 7z
+  - choco install 7zip
+  - 7za
 
 install: skip  
 
