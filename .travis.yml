@@ -2,12 +2,8 @@ os: windows
 
 language: bash
 
-addons:
-  apt:
-    packages:
-    - git
-
 before_install:
+  - choco upgrade git
   - git --version
 
 install: skip  
