@@ -3,7 +3,7 @@ os: windows
 language: bash
 
 before_install:
-  - choco upgrade git
+  - git update-git-for-windows
   - git --version
 
 install: skip  
