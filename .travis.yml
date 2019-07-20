@@ -1,3 +1,6 @@
+dist: trusty
+sudo: false
+
 language: bash
 
 addons:
@@ -5,6 +8,9 @@ addons:
     packages:
     - git
 
-install: skip
+before_install:
+  - git --version
+
+install: skip  
 
 script: skip
