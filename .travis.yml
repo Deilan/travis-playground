@@ -1,5 +1,16 @@
+dist: trusty
+sudo: false
+
 language: bash
 
-install: skip
+addons:
+  apt:
+    packages:
+    - git
+
+before_install:
+  - git --version
+
+install: skip  
 
 script: skip
