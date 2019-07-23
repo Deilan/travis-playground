@@ -3,7 +3,7 @@ os: windows
 language: bash
 
 before_install:
-  - pwd -W
+  - mktemp -d
 
 install: skip  
 
