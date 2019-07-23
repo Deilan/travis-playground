@@ -3,7 +3,8 @@ os: windows
 language: bash
 
 before_install:
-  - mktemp -d
+  - temp_dir=$(mktemp -d | xargs cygpath -w)
+  - echo ${temp_dir}
 
 install: skip  
 
