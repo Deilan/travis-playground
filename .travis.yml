@@ -3,10 +3,10 @@ os: windows
 language: bash
 
 before_install:
-  - $([[ "${TRAVIS_BRANCH}" == "${TRAVIS_BRANCH}" ]]) &&
-      travis_retry powershell Install-WindowsFeature Net-Framework-Core &&
-      travis_retry choco install wixtoolset --version 3.11.1
+  - archivation_path="$(cygpath -w "${TRAVIS_BUILD_DIR}/")*"
+  - echo "${archivation_path}"
+  - 7z a -t7z -m5=LZMA2 -r "123.7z" "${archivation_path}"
 
-install: skip  
+install: skip
 
 script: skip
