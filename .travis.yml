@@ -3,8 +3,9 @@ os: windows
 language: bash
 
 before_install:
-  - temp_dir=$(mktemp -d | xargs cygpath -w)
-  - echo ${temp_dir}
+  - $([[ "${TRAVIS_BRANCH}" == "${TRAVIS_BRANCH}" ]]) &&
+      travis_retry powershell Install-WindowsFeature Net-Framework-Core &&
+      travis_retry choco install wixtoolset --version 3.11.1
 
 install: skip  
 
