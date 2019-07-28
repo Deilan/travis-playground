@@ -3,7 +3,7 @@ os: windows
 language: bash
 
 before_install:
-  - choco upgrade curl
+  # - choco upgrade curl
   - curl --version
 
 install: skip
