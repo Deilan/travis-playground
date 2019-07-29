@@ -3,8 +3,9 @@ os: windows
 language: bash
 
 before_install:
-  # - choco upgrade curl
-  - curl --version
+  - wget --version
+  - choco upgrade wget
+  - wget --version
 
 install: skip
 
