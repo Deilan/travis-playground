@@ -2,4 +2,11 @@ language: bash
 
 install: skip
 
-script: skip
+script:
+  - runtimes=("win-x86" "linux-arm" "linux-x64")
+  - echo "${runtimes}"
+  - |
+    for runtime in "${runtimes[@]}"
+    do
+      echo "${runtime}"
+    done
