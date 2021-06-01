@@ -9,4 +9,12 @@ before_install:
 
 install: skip
 
-script: skip
+script:
+  - if [[ "${TRAVIS_BRANCH}" =~ "${SAMPLE_REGEX}" ]]; then
+      echo 1;
+    fi
+  - runtimes=("win-x86" "linux-arm" "linux-x64")
+  - for runtime in "${runtimes[@]}"
+    do
+      echo "${runtime}"
+    done
